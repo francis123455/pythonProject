@@ -5,22 +5,22 @@ import numpy as np
 import tensorflow as tf
 import cv2
 
-#
-# # 下载SSD MobileNet V2模型
-# MODEL_NAME = 'ssd_mobilenet_v2'
-# MODEL_DATE = '20200711'
-# MODEL_TAR_FILENAME = MODEL_NAME + '.tar.gz'
-# MODELS_DIR = 'models'
-# if not os.path.exists(MODELS_DIR):
-#     os.makedirs(MODELS_DIR)
-# MODEL_DIR = os.path.join(MODELS_DIR, MODEL_NAME)
-# if not os.path.exists(MODEL_DIR):
-#     MODEL_URL = 'http://download.tensorflow.org/models/object_detection/tf2/' + MODEL_DATE + '/' + MODEL_TAR_FILENAME
-#     urllib.request.urlretrieve(MODEL_URL, MODEL_TAR_FILENAME)
-#     tar = tarfile.open(MODEL_TAR_FILENAME)
-#     tar.extractall(MODELS_DIR)
-#     tar.close()
-#     os.remove(MODEL_TAR_FILENAME)
+
+# 下载SSD MobileNet V2模型
+MODEL_NAME = 'ssd_mobilenet_v2'
+MODEL_DATE = '20200711'
+MODEL_TAR_FILENAME = MODEL_NAME + '.tar.gz'
+MODELS_DIR = 'models'
+if not os.path.exists(MODELS_DIR):
+    os.makedirs(MODELS_DIR)
+MODEL_DIR = os.path.join(MODELS_DIR, MODEL_NAME)
+if not os.path.exists(MODEL_DIR):
+    MODEL_URL = 'http://download.tensorflow.org/models/object_detection/tf2/' + MODEL_DATE + '/' + MODEL_TAR_FILENAME
+    urllib.request.urlretrieve(MODEL_URL, MODEL_TAR_FILENAME)
+    tar = tarfile.open(MODEL_TAR_FILENAME)
+    tar.extractall(MODELS_DIR)
+    tar.close()
+    os.remove(MODEL_TAR_FILENAME)
 
 # 加载模型
 model_dir = os.path.join('models/ssd_mobilenet_v2', 'saved_model')
