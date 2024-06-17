@@ -3,7 +3,7 @@ import tarfile
 import urllib.request
 import numpy as np
 # import tensorflow as tf
-# import cv2
+import cv2
 
 
 # 下载SSD MobileNet V2模型
